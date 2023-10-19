@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Delius_Swash_Caps as DeliusSwashCaps } from 'next/font/google';
 import { ReactNode } from 'react';
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const font = DeliusSwashCaps({ subsets: ['latin'], weight: ['400'] });
 
 export const metadata: Metadata = {
   title: 'eu + vc',
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
